@@ -4,7 +4,7 @@
     1. npm install --legacy-peer
 
 2. cd frontend/skill-sharing-platform
-   2.1 npm install --legacy-peer
+    1. npm install --legacy-peer
 
 3. docker-compose up --build
 
