@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend/
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - NODE_ENV=development
+
+  frontend:
+    build: ./frontend/skill-sharing-platform/
+    volumes:
+      - ./app/certificates:/app/certificates
+    environment:
+      - HTTPS=true
+      - SSL_CRT_FILE=/app/certificates/cert.crt
+      - SSL_KEY_FILE=/app/certificates/cert.key
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
