@@ -1,5 +1,5 @@
 Hi
 
-You should use
-
 npm install --legacy-peer
+
+docker-compose up --build
