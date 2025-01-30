@@ -1,12 +1,12 @@
 Сайн байна уу 👋
 
 1. cd backend
-npm install --legacy-peer
+    1. npm install --legacy-peer
 
 2. cd frontend/skill-sharing-platform
-npm install --legacy-peer
+   2.1 npm install --legacy-peer
 
-docker-compose up --build
+3. docker-compose up --build
 
 1. Цалин бодохдоо crontab ашигласан байгаа ба шалгаж үзэхийг хүсвэл POSTMAN ашиглан ' http://localhost:5000/api/salary/calculate ' хүсэлт явуулж шалгаарай баярлалаа.
 
