@@ -1,5 +1,9 @@
 Hi
 
+cd backend
+npm install --legacy-peer
+
+cd frontend/skill-sharing-platform
 npm install --legacy-peer
 
 docker-compose up --build
