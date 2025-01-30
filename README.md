@@ -1,4 +1,4 @@
-Hi
+Сайн байна уу.
 
 cd backend
 npm install --legacy-peer
