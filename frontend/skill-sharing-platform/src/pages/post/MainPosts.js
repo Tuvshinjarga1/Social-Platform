@@ -15,7 +15,7 @@ const MainPosts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/posts');
+        const response = await axios.get('https://social-platform-backend.onrender.com/api/posts');
 
         // Ensure that response.data is an array and filter only approved posts
         if (response.status === 200) {
@@ -50,7 +50,7 @@ const MainPosts = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.put(
-        `http://localhost:5000/api/posts/${id}/like`,
+        `https://social-platform-backend.onrender.com/api/posts/${id}/like`,
         {},
         token
           ? { headers: { Authorization: `Bearer ${token}` } }
