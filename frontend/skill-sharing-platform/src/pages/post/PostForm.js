@@ -70,7 +70,7 @@ const PostForm = () => {
         readingTime,
       };
       console.log(postData);
-      const response = await axios.post('http://localhost:5000/api/posts', postData, {
+      const response = await axios.post('https://social-platform-backend.onrender.com/api/posts', postData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json', // Use JSON format
