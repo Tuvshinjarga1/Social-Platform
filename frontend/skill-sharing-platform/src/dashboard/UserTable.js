@@ -34,7 +34,7 @@ const UserTable = () => {
           return;
         }
 
-        const response = await axios.get('http://localhost:5000/api/backoffice/authors', {
+        const response = await axios.get('https://social-platform-backend.onrender.com/api/backoffice/authors', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
