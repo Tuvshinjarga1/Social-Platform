@@ -38,7 +38,7 @@ const BackofficePosts = () => {
           return;
         }
 
-        const response = await axios.get('http://localhost:5000/api/backoffice/posts', {
+        const response = await axios.get('https://social-platform-backend.onrender.com/api/backoffice/posts', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setPosts(response.data);
@@ -55,7 +55,7 @@ const BackofficePosts = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `http://localhost:5000/api/backoffice/posts/${id}/approve`,
+        `https://social-platform-backend.onrender.com/api/backoffice/posts/${id}/approve`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -71,7 +71,7 @@ const BackofficePosts = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `http://localhost:5000/api/backoffice/posts/${id}/reject`,
+        `https://social-platform-backend.onrender.com/api/backoffice/posts/${id}/reject`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -86,7 +86,7 @@ const BackofficePosts = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/posts/${id}`, {
+      await axios.delete(`https://social-platform-backend.onrender.com/api/posts/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('Post deleted successfully!');
