@@ -23,7 +23,7 @@ const Profile = () => {
   const fetchPosts = async () => {
     try {
       const token = localStorage.getItem('token');
-      const postsResponse = await axios.get('http://localhost:5000/api/user/posts', {
+      const postsResponse = await axios.get('https://social-platform-backend.onrender.com/api/user/posts', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -55,7 +55,7 @@ const Profile = () => {
       }
 
       try {
-        const userResponse = await axios.get('http://localhost:5000/api/user', {
+        const userResponse = await axios.get('https://social-platform-backend.onrender.com/api/user', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -63,7 +63,7 @@ const Profile = () => {
         const user = userResponse.data;
         setUserData(user);
 
-        const postsResponse = await axios.get('http://localhost:5000/api/user/posts', {
+        const postsResponse = await axios.get('https://social-platform-backend.onrender.com/api/user/posts', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -108,7 +108,7 @@ const Profile = () => {
       }));
   
       // Send the delete request to the server
-      await axios.delete(`http://localhost:5000/api/posts/${postId}`, {
+      await axios.delete(`https://social-platform-backend.onrender.com/api/posts/${postId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
