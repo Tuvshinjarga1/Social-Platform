@@ -34,7 +34,7 @@ const PendingPostDetail = () => {
           return;
         }
 
-        const response = await axios.get(`http://localhost:5000/api/request/${id}`, {
+        const response = await axios.get(`https://social-platform-backend.onrender.com/api/request/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         console.log('Fetched Post:', response.data); // Debugging
@@ -52,7 +52,7 @@ const PendingPostDetail = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `http://localhost:5000/api/backoffice/posts/${id}/approve`,
+        `https://social-platform-backend.onrender.com/api/backoffice/posts/${id}/approve`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -68,7 +68,7 @@ const PendingPostDetail = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `http://localhost:5000/api/backoffice/posts/${id}/reject`,
+        `https://social-platform-backend.onrender.com/api/backoffice/posts/${id}/reject`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -83,7 +83,7 @@ const PendingPostDetail = () => {
   const handleDelete = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/posts/${id}`, {
+      await axios.delete(`https://social-platform-backend.onrender.com/api/posts/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('Post deleted successfully!');
