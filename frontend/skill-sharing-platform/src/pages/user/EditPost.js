@@ -47,7 +47,7 @@ const EditPost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://localhost:5000/api/posts/${id}`, {
+      const response = await axios.get(`https://social-platform-backend.onrender.com/api/posts/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -67,7 +67,7 @@ const EditPost = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `http://localhost:5000/api/posts/${id}`,
+        `https://social-platform-backend.onrender.com/api/posts/${id}`,
         { title, description, category, readingTime },
         {
           headers: {
