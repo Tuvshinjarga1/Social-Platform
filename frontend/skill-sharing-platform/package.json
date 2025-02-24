@@ -32,7 +32,7 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "start": "HTTPS=true SSL_CRT_FILE=/app/certificates/cert.crt SSL_KEY_FILE=/app/certificates/cert.key react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
