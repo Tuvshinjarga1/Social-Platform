@@ -16,7 +16,7 @@ const Home = () => {
       }
 
       try {
-        const response = await axios.get('http://localhost:5000/api/user', {
+        const response = await axios.get('https://social-platform-backend.onrender.com/api/user', {
           headers: {
             Authorization: `Bearer ${token}`, // Token-г header-д дамжуулах
           },
