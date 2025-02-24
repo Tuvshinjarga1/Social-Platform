@@ -46,13 +46,13 @@ const Dashboard = () => {
           return;
         }
 
-        const usersResponse = await axios.get('http://localhost:5000/api/backoffice/authors', {
+        const usersResponse = await axios.get('https://social-platform-backend.onrender.com/api/backoffice/authors', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
 
-        const postsResponse = await axios.get('http://localhost:5000/api/posts', {
+        const postsResponse = await axios.get('https://social-platform-backend.onrender.com/api/posts', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
