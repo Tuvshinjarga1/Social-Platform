@@ -21,7 +21,7 @@ const PostDetail = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/posts/${id}`);
+        const response = await axios.get(`https://social-platform-backend.onrender.com/api/posts/${id}`);
         console.log(response.data);
         setPost(response.data);
       } catch (error) {
@@ -33,7 +33,7 @@ const PostDetail = () => {
       const token = localStorage.getItem('token');
       if (token) {
         try {
-          const response = await axios.get('http://localhost:5000/api/user', {
+          const response = await axios.get('https://social-platform-backend.onrender.com/api/user', {
             headers: { Authorization: `Bearer ${token}` },
           });
           setUsername(response.data.username);
@@ -58,7 +58,7 @@ const PostDetail = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.put(
-        `http://localhost:5000/api/posts/${id}/like`,
+        `https://social-platform-backend.onrender.com/api/posts/${id}/like`,
         {},
         token
           ? { headers: { Authorization: `Bearer ${token}` } }
@@ -86,7 +86,7 @@ const PostDetail = () => {
       };
 
       const response = await axios.post(
-        `http://localhost:5000/api/posts/${id}/comment`,
+        `https://social-platform-backend.onrender.com/api/posts/${id}/comment`,
         commentData,
         token
           ? { headers: { Authorization: `Bearer ${token}` } }
@@ -113,7 +113,7 @@ const PostDetail = () => {
       };
 
       const response = await axios.post(
-        `http://localhost:5000/api/posts/${id}/comment/${parentCommentId}/reply`,
+        `https://social-platform-backend.onrender.com/api/posts/${id}/comment/${parentCommentId}/reply`,
         replyData,
         token
           ? { headers: { Authorization: `Bearer ${token}` } }
@@ -139,7 +139,7 @@ const PostDetail = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        `http://localhost:5000/api/posts/${id}/report`,
+        `https://social-platform-backend.onrender.com/api/posts/${id}/report`,
         { reason: reportReason },
         token
           ? { headers: { Authorization: `Bearer ${token}` } }
