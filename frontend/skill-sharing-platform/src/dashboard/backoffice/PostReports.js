@@ -34,7 +34,7 @@ const PostReports = () => {
           return;
         }
 
-        const response = await axios.get('http://localhost:5000/api/backoffice/reports', {
+        const response = await axios.get('https://social-platform-backend.onrender.com/api/backoffice/reports', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setReports(response.data);
@@ -50,7 +50,7 @@ const PostReports = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/posts/${id}`, {
+      await axios.delete(`https://social-platform-backend.onrender.com/api/posts/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('Post deleted successfully!');
